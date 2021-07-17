@@ -1,0 +1,23 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.articles {
+    &__item {
+        h3 {
+            padding-bottom: 0.5rem;
+        }
+
+        flex: 1 100%;
+        padding: 1rem;
+        margin: 1rem 0;
+        border: 1px solid black;
+        border-radius: .2rem;
+        background-color: white;
+    }
+    
+    &__item-header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
