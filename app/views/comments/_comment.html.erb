@@ -1,6 +1,7 @@
 <div class="comment">
     <div>
         <strong><%= comment.commenter %></strong>
+        <%= render "fragments/tag", tag: comment.status %>
         <%= link_to "Delete", [comment.article, comment], method: :delete %>
     </div>
     <div>

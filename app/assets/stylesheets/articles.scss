@@ -8,21 +8,24 @@
         border-radius: .2rem;
         background-color: white;
         padding: 1rem;
+        position: relative;
     }
 }
 
 .articles {
     &__item {
-        h3 {
-            padding-bottom: 0.5rem;
-        }
-
         flex: 1 100%;
         padding: 1rem;
         margin: 1rem 0;
         border: 1px solid black;
         border-radius: .2rem;
         background-color: white;
+        position: relative;
+        transition: transform 200ms ease-in-out;
+
+        &:hover {
+            transform: scale(102%);
+        }
     }
     
     &__item-header {

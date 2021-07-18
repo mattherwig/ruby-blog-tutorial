@@ -9,15 +9,14 @@
     border: 1px solid black;
     border-radius: 0.2rem;
     display: flex;
+    position: relative;
+    opacity: 0%;
+    animation: fadeIn 200ms ease-in forwards;
 
     & > *:first-child {
         width: 10rem;
         display: flex;
         flex-direction: column;
-    }
-
-    & > *:last-child {
-        flex: 1;
     }
 }
 
@@ -27,13 +26,11 @@
     margin: 1rem 0;
     gap: 1rem;
     
-    & > * {
-        flex: 1;
+    & > *:first-child {
+        width: 75%;
     }
     
     .comments__form {
-        flex: 0 0 25%;
-
         h3 {
             padding-bottom: 0.5rem;
         }
@@ -43,4 +40,9 @@
             width: 100%;
         }
     }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0%; top: 1rem; }
+    100% { opacity: 100%; top: 0; }
 }

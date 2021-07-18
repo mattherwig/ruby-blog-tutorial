@@ -1,14 +1,19 @@
 <div class="articles">
     <div>
-        <h1>Articles (<%= @articles.public_count %>)</h1>
+        <h2>Articles (<%= @articles.public_count %> public)</h2>
         <%= link_to "New Article", new_article_path %>
     </div>
     <div class="articles__list">
         <% @articles.each do |article| %>
-            <div class="articles__item">
+            <%
+=begin%>
+ <%= link_to , article %> 
+<%
+=end%>
+            <div class="articles__item" onclick="window.location='<%= article_path(article) %>'">
                 <div class="articles__item-header">
-                    <h3><%= article.title %></h3>
-                    <%= link_to "Details", article %>
+                    <h3><%= article.title %><%= render "fragments/tag", tag: article.status %></h3>
+                    
                 </div>
                 <p><%= article.body %></p>
             </div>

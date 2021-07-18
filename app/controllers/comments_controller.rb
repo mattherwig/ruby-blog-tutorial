@@ -5,11 +5,20 @@ class CommentsController < ApplicationController
     def index
         @article = Article.find(params[:article_id])
     end
+
+    def new
+        @comment = Comment.new
+    end
     
     def create
         @article = Article.find(params[:article_id])
         @comment = @article.comments.create(comment_params)
-        redirect_to article_path @article
+
+        if @comment
+            redirect_to article_path @article
+        else
+            render article_path @article
+        end
     end
 
     def destroy
