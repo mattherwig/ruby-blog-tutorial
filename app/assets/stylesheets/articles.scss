@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.article {
+    &__content {
+        border: 1px solid black;
+        border-radius: .2rem;
+        background-color: white;
+        padding: 1rem;
+    }
+}
+
 .articles {
     &__item {
         h3 {

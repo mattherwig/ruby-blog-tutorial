@@ -1,0 +1,9 @@
+<div class="comment">
+    <div>
+        <strong><%= comment.commenter %></strong>
+        <%= link_to "Delete", [comment.article, comment], method: :delete %>
+    </div>
+    <div>
+        <%= comment.body %>
+    </div>
+</div>

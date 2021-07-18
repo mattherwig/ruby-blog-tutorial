@@ -1,0 +1,11 @@
+<div class="comments">
+    <div>
+        <h3>Comments</h3>
+        <% if article.comments.empty? %>
+            <p>No Comments</p>
+        <% else %>
+            <%= render article.comments %>
+        <% end %>
+    </div>
+    <%= render "comments/form", article: article %>
+</div>

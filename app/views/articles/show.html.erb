@@ -1,9 +1,12 @@
-<div>
-    <div>
-        <h3><%= @article.title %></h3>
+<div class="article">
+    <div class="article__content">
+        <h2><%= @article.title %></h2>
         <p><%= @article.body %></p>
+        <%= render "fragments/tag", tag: @article.status %>
+        <br/>
+        <%= link_to "Edit", edit_article_path(@article) %>
+        <%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+        <%= link_to "Go Back", root_path %>
     </div>
-    <%= link_to "Edit", edit_article_path(@article) %>
-    <%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
-    <%= link_to "Go Back", root_path %>
+    <%= render "comments/comment_page", article: @article %>
 </div>
